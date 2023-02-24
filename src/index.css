@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    font-family: monospace;
+}
+
+#root{
+    height: 100vh;
+}
+
+body{
+    height: 100%;
+}
+
+.App{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.menu{
+    box-sizing: border-box;
+    padding: 15px 30px;
+    width: 250px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.buton-sidenav{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    background: none;
+    color: rgb(154, 154, 180);
+    margin-bottom: 15px;
+}
+
+.buton-sidenav:hover{
+    color: #000;
+}
+
+.logo{
+    margin-bottom: 100px;
+}
+
+.container{
+    box-sizing: border-box;
+    padding: 50px 50px;
+    width: 100%;
+}
+
+main{
+    background-color: aliceblue;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+p{
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.row{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+
+button{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.default{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+button.default:hover:not(button:disabled){
+    filter: brightness(80%);    
+}
+
+button.disableShadow{
+    box-shadow: none;
+    background: blue;
+    color: #fff;
+    box-shadow: none;
+}
+
+button:disabled{
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+
+button.outline{
+    background: none;
+    border: 1px solid blue;
+    color: blue;
+}
+
+button.outline:hover{
+    background: rgb(221, 221, 252);
+}
+
+button.text{
+    background: none;
+    box-shadow: none;
+}
+
+button.text:not(.text:disabled){
+    color: blue;
+}
+
+button.text:hover:not(.text:disabled){
+    background: rgb(154, 154, 180);
+}
+
+button.icon{
+    background: blue;
+    color: #fff;
+}
+
+button.size{
+    background: blue;
+    color: #fff;
+}
+
+button.sm,
+button.md,
+button.lg{
+    color: #fff;
+    background: blue;
+}
+
+button.sm{
+  padding: 5px 10px;
+}
+
+button.md{
+  padding: 10px 15px;
+}
+
+button.lg{
+  padding: 14px 19px;
+}
+
+button.primary{
+    background: blue;
+    color: #fff;
+}
+
+button.secondary{
+    background: #244733;
+    color: #fff;
+}
+
+button.danger{
+    background: red;
+    color: #fff;
+}
+
+button.primary:hover{
+    background: rgb(0, 0, 150);
+}
+
+button.secondary:hover{
+    background: #15291d;
+}
+
+button.danger:hover{
+    background: rgb(112, 3, 3);
+}
+
+
+/* ---------- INPUTS ----------*/
+
+.content:has(input, textarea){
+    width: 250px;
+}
+
+input, textarea{
+    width: 200px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+input.sm{
+    width: 200px;
+    height: 35px;
+}
+
+input.md{
+    width: 200px;
+    height: 50px;
+}
+
+span{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+input:hover{
+    border: 1px solid #000;
+}
+
+input:focus:not(input:disabled){
+    border: 1px solid dodgerblue;
+}
+
+span.error{
+    color: red;
+}
+
+input.error{
+    border: 1px solid red;
+}
+
+input.error::placeholder{
+    color: red;
+}
+
+input:disabled{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: not-allowed;
+}
+
+input.startIcon{
+    padding-left: 35px;
+}
+
+input.startIcon::placeholder{
+    padding-left: -10px;
+}
+
+.start-Icon > svg,
+.end-Icon > svg{
+    font-size: 17px;
+    position: relative;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.start-Icon > svg{
+    left: 10px;
+    top: -35px;
+}
+
+.end-Icon{
+    display: flex;
+    justify-content: right;
+}
+
+.end-Icon > svg{
+    top: -35px;
+    right: 60px;
+}
+
+.content:has(input.fullWidth){
+    width: 100%;
+}
+
+input.fullWidth{
+    width: 100%;
+}
+
+textarea{
+    line-height: 30px;
+    resize: none;
+    outline: none;
+}
